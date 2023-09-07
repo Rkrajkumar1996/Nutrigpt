@@ -104,19 +104,19 @@ const Loading = styled.p`
   margin: 1rem 0;
 
   &::after {
-    content: "⏳";
+    content: "🐵";
     animation: loading 2s infinite;
   }
 
   @keyframes loading {
     0% {
-      content: "⌛️";
+      content: "🙈";
     }
     50% {
-      content: "⏳";
+      content: "🙉";
     }
     100% {
-      content: "⌛️";
+      content: "🙊";
     }
   }
 `;
@@ -302,7 +302,7 @@ const PinButton = styled.div`
   border: 1px solid transparent;
 
   &::before {
-    content: "📍";
+    content: "❎";
     margin-right: 4px;
     left: 8px;
     top: 8px;
@@ -516,58 +516,110 @@ const LeadButton = styled.button`
 
 const options = {
   travelStyles: [
-    "Cultural",
-    "Adventure",
-    "Relaxation",
-    "Beach",
-    "City Break",
-    "Road Trip",
-    "Wildlife Safari",
-    "Ski",
+    "Vegetarian",
+"Vegan",
+"Omnivore",
+"Pescatarian",
+"Flexitarian",
+"Ketogenic (Keto)",
+"Paleo",
+"Gluten-Free",
+"Dairy-Free",
+"Lactose Intolerant",
+"Nut-Free",
+"Soy-Free",
+"Low Carb",
+"Low Fat",
+"Mediterranean",
+"DASH Diet",
+"Vegetarian with Dairy (Lacto-Vegetarian)",
+"Vegetarian with Eggs (Ovo-Vegetarian)",
+"Vegetarian with Dairy and Eggs (Lacto-Ovo Vegetarian)",
+"Raw Food Diet",
   ],
   interestsNew: [
-    { name: "History", emoji: "🏛️" },
-    { name: "Art", emoji: "🎨" },
-    { name: "Food", emoji: "🍴" },
-    { name: "Music", emoji: "🎵" },
-    { name: "Nature", emoji: "🌳" },
-    { name: "Sports", emoji: "⚽" },
-    { name: "Photography", emoji: "📷" },
-    { name: "Architecture", emoji: "🏰" },
-    { name: "Literature", emoji: "📚" },
+    { "name": "High Protein", "emoji": "💪" },
+    { "name": "Low Carb", "emoji": "🥦" },
+    { "name": "Low Fat", "emoji": "🥗" },
+    { "name": "High Fiber", "emoji": "🌾" },
+    { "name": "Balanced Macronutrients", "emoji": "⚖️" },
+    { "name": "Low Sodium", "emoji": "🧂" },
+    { "name": "High Omega-3 Fatty Acids", "emoji": "🐟" },
+    { "name": "High Calcium", "emoji": "🥛" },
+    { "name": "High Iron", "emoji": "🍖" },
+    { "name": "Low Added Sugar", "emoji": "🍭" },
+    { "name": "Antioxidant-Rich", "emoji": "🍏" },
+    { "name": "Vitamin D", "emoji": "☀️" },
+    { "name": "Potassium-Rich", "emoji": "🍌" },
+    { "name": "Magnesium-Rich", "emoji": "🥦" },
+    { "name": "Zinc-Rich", "emoji": "🌰" },
+    { "name": "Vitamin C", "emoji": "🍊" },
+    { "name": "B Vitamins", "emoji": "🥑" }
   ],
 
   interests: [
-    "History",
-    "Art",
-    "Food",
-    "Music",
-    "Nature",
-    "Sports",
-    "Photography",
-    "Architecture",
-    "Literature",
+    "High Protein",
+"Low Carb",
+"Low Fat",
+"High Fiber",
+"Balanced Macronutrients",
+"Low Sodium",
+"High Omega-3 Fatty Acids",
+"High Calcium",
+"High Iron",
+"Low Added Sugar",
+"Antioxidant-Rich",
+"Vitamin D",
+"Potassium-Rich",
+"Magnesium-Rich",
+"Zinc-Rich",
+"Vitamin C",
+"B Vitamins",
   ],
 
   accommodationTypes: [
-    "Hotel",
-    "Boutique Hotel",
-    "Hostel",
-    "Resort",
-    "Vacation Rental",
-    "Camping",
-    "Homestay",
-    "Bed and Breakfast",
+    "Fruits",
+    "Nuts and Seeds",
+    "Greek Yogurt",
+    "Hummus with Veggies",
+    "Rice Cakes with Nut Butter",
+    "Cottage Cheese",
+    "Trail Mix",
+    "Whole Grain Crackers with Cheese",
+    "Popcorn",
+    "Veggie Sticks with Dip",
+    "Hard-Boiled Eggs",
+    "Energy Bars or Protein Bars",
+    "Smoothies with Protein Powder",
+    "Nut Butter and Banana Sandwich",
+    "Oatmeal with Fruit",
+    "Roasted Chickpeas",
+    "Dark Chocolate",
+    "Low-Fat Cheese Stick",
+    "Whole Grain Toast with Avocado",
+    "Protein Shake"
   ],
   activityTypes: [
-    "Outdoor",
-    "Sightseeing",
-    "Shopping",
-    "Nightlife",
-    "Museums",
-    "Theme Parks",
-    "Water Sports",
-    "Yoga and Wellness",
+    "Weight Loss🏋️‍♀️",
+    "Muscle Gain💪",
+    "Strength Training🏋️‍♂️",
+    "Endurance Training🏃‍♀️",
+    "Flexibility and Mobility🧘‍♂️",
+    "Core Strengthening🤸‍♀️",
+    "Cardiovascular Fitness🏃‍♂️",
+    "Body Toning💃",
+    "Functional Fitness🤹‍♀️",
+    "Athletic Performance🏆",
+    "Weight Maintenance⚖️",
+    "Stress Relief🧘‍♀️",
+    "Posture Improvement🚶‍♂️",
+    "Rehabilitation🏥",
+    "Balance and Stability⚖️",
+    "Cross-Training🏃‍♀️",
+    "Bodyweight Mastery🤸‍♂️",
+    "Event Preparation🏅",
+    "Active Aging👵",
+    "Overall Well-being🌟"
   ],
   cuisineTypes: [
     { name: "Traditional", emoji: "😋" },
@@ -607,21 +659,21 @@ const topLocations = [
 
 const defaultValues = {
   destinationCountry: "",
-  budget: "250 USD",
+  budget: "",
   travelStyle: options.travelStyles[0],
   interestsNew: [],
   accommodationType: options.accommodationTypes[0],
-  transportationType: "Bus",
+  transportationType: "",
   activityType: [options.activityTypes[0]],
   cuisineType: options.cuisineTypes[0],
-  tripDuration: "3",
+  tripDuration: "",
   language: options.languages[0].value,
 };
 
 const Main = ({ loading, response, handleSubmit, handleChange, email }) => (
   <MainContent>
-    <Title>⭐️ Travel Planner ⭐️</Title>
-    {!response && <Subtitle>Fill the form to generate your itinerary</Subtitle>}
+    <Title>🥗 Food Diet And Fitness Planner 🥗 </Title>
+    {!response && <Subtitle>Fill the form to generate your Plan</Subtitle>}
 
     <ResponseContainer>
       {loading ? <Loading /> : response && <ResponseData response={response} />}
@@ -812,7 +864,7 @@ const AITravelPlanner = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    let prompt = `Generate a personalized travel itinerary for a trip to ${values.destinationCountry} with a budget of ${values.budget}. The traveler is interested in a ${values.travelStyle} vacation and enjoys ${values.interestsNew}. They are looking for ${values.accommodationType} accommodations and prefer ${values.transportationType} transportation. The itinerary should include ${values.activityType} activities and ${values.cuisineType} dining options. Please provide a detailed itinerary with daily recommendations for ${values.tripDuration} days, including suggested destinations, activities, and dining options. The itinerary should be written in ${values.language}. `;
+    let prompt = `Generate food diet and fitness LCHF based 7 day planner take the information user allergy in ${values.budget}. The user Dietary Preference is ${values.travelStyle} and the Nutrient Preferences is ${values.interestsNew}. His snack Choice is ${values.accommodationType} The User Fitness Goal is ${values.activityType} Goal and his native cuisine type is ${values.cuisineType}. User age is ${values.tripDuration} for should be written in ${values.language}. `;
 
     fetch(`${process.env.REACT_APP_ENDPOINT_URL}`, {
       method: "POST",
@@ -865,177 +917,9 @@ const AITravelPlanner = () => {
         />
         <Panel>
           <FormContainer onSubmit={handleSubmit}>
-            <Label htmlFor="destinationCountry">Destination Country</Label>
-            <Input
-              type="text"
-              placeholder="e.g. San Francisco/USA, Paris/France, Istanbul/Turkey, etc."
-              id="destinationCountry"
-              name="destinationCountry"
-              value={values.destinationCountry}
-              onChange={handleChange}
-              required
-            />
-            <TopLocationContainer>
-              <Label htmlFor="topDestinations">🔥Top Destionations:</Label>
-              {topLocations.map((location) => (
-                <PinButton
-                  key={location.value}
-                  onClick={() => handleLocationClick(location)}
-                >
-                  {location.name}
-                </PinButton>
-              ))}
-            </TopLocationContainer>
-            <FormRow>
-              <FormGroup>
-                <Label htmlFor="budget">
-                  Budget
-                  <p
-                    style={{
-                      display: "inline-block",
-                      color: "#666",
-                      fontSize: "10px",
-                    }}
-                  >
-                    (with currency)
-                  </p>
-                </Label>
-                <Input
-                  type="text"
-                  placeholder="e.g. $1000 USD, 1000 EUR, etc."
-                  id="budget"
-                  name="budget"
-                  value={values.budget}
-                  onChange={handleChange}
-                  required
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label htmlFor="tripDuration">
-                  Trip Duration
-                  <p
-                    style={{
-                      display: "inline-block",
-                      color: "#666",
-                      fontSize: "10px",
-                    }}
-                  >
-                    (in days)
-                  </p>
-                </Label>
-                <Input
-                  type="number"
-                  id="tripDuration"
-                  name="tripDuration"
-                  value={values.tripDuration}
-                  onChange={handleChange}
-                  required
-                />
-              </FormGroup>
-            </FormRow>
-            <Label htmlFor="interests">Interests</Label>
-            <InterestsContainerNew>
-              {options.interestsNew.map((interest, index) => (
-                <InterestItemNew
-                  key={index}
-                  className={
-                    selectedInterests.includes(interest.name) ? "selected" : ""
-                  }
-                  onClick={() => {
-                    handleInterestClick(interest.name);
-                  }}
-                  value={interest}
-                >
-                  <InterestEmoji aria-label="emoji">
-                    {interest.emoji}
-                  </InterestEmoji>
-                  <InterestName>{interest.name}</InterestName>
-                </InterestItemNew>
-              ))}
-            </InterestsContainerNew>
+            <Label htmlFor="destinationCountry">Plan Your Diet</Label>
 
-            <FormRow>
-              <FormGroup>
-                <Label htmlFor="accommodationType">Accommodation</Label>
-                <Select
-                  id="accommodationType"
-                  name="accommodationType"
-                  value={values.accommodationType}
-                  onChange={handleChange}
-                >
-                  {options.accommodationTypes.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </Select>
-              </FormGroup>
-              <FormGroup>
-                <Label htmlFor="travelStyle">Travel Style</Label>
-                <Select
-                  id="travelStyle"
-                  name="travelStyle"
-                  value={values.travelStyle}
-                  onChange={handleChange}
-                >
-                  {options.travelStyles.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </Select>
-              </FormGroup>
-            </FormRow>
-
-            <Label htmlFor="transportationType">
-              Transportation Type
-              <p
-                style={{
-                  display: "inline-block",
-                  fontSize: "10px",
-
-                  color: "#666",
-                }}
-              >
-                (e.g. car, train, bus, etc.)
-              </p>
-            </Label>
-            <Input
-              type="text"
-              id="transportationType"
-              name="transportationType"
-              value={values.transportationType}
-              onChange={handleChange}
-              required
-            />
-
-            <Label htmlFor="activityType">
-              Activity Type
-              <p
-                style={{
-                  display: "inline-block",
-                  fontSize: "10px",
-
-                  color: "#666",
-                }}
-              >
-                (select multiple options)
-              </p>
-            </Label>
-            <Select
-              id="activityType"
-              name="activityType"
-              multiple
-              value={values.activityType}
-              onChange={handleMultiSelectChange}
-            >
-              {options.activityTypes.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </Select>
-            <Label htmlFor="cuisineType">Cuisine Type</Label>
+            <Label htmlFor="cuisineType"> Select Your Native Cuisine</Label>
             <CuisineTypesContainer>
               {options.cuisineTypes.map((cuisineType) => (
                 <CuisineType
@@ -1062,6 +946,135 @@ const AITravelPlanner = () => {
                 </CuisineType>
               ))}
             </CuisineTypesContainer>
+            <FormRow>
+              <FormGroup>
+                <Label htmlFor="budget">
+                  Type any Allergy Restrictions
+                  <p
+                    style={{
+                      display: "inline-block",
+                      color: "#666",
+                      fontSize: "10px",
+                    }}
+                  >
+                    (if you not any Food Allergy type NA)
+                  </p>
+                </Label>
+                <Input
+                  type="text"
+                  placeholder="Eg Avacoda, Papaya."
+                  id="budget"
+                  name="budget"
+                  value={values.budget}
+                  onChange={handleChange}
+                  required
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label htmlFor="tripDuration">
+                  Your Age
+                  <p
+                    style={{
+                      display: "inline-block",
+                      color: "#666",
+                      fontSize: "10px",
+                    }}
+                  >
+                    (E.g 26,27)
+                  </p>
+                </Label>
+                <Input
+                  type="number"
+                  id="tripDuration"
+                  name="tripDuration"
+                  value={values.tripDuration}
+                  onChange={handleChange}
+                  required
+                />
+              </FormGroup>
+            </FormRow>
+            <Label htmlFor="interests">Nutriant Preferance</Label>
+            <InterestsContainerNew>
+              {options.interestsNew.map((interest, index) => (
+                <InterestItemNew
+                  key={index}
+                  className={
+                    selectedInterests.includes(interest.name) ? "selected" : ""
+                  }
+                  onClick={() => {
+                    handleInterestClick(interest.name);
+                  }}
+                  value={interest}
+                >
+                  <InterestEmoji aria-label="emoji">
+                    {interest.emoji}
+                  </InterestEmoji>
+                  <InterestName>{interest.name}</InterestName>
+                </InterestItemNew>
+              ))}
+            </InterestsContainerNew>
+
+            <FormRow>
+              <FormGroup>
+                <Label htmlFor="accommodationType">Snack Choices</Label>
+                <Select
+                  id="accommodationType"
+                  name="accommodationType"
+                  value={values.accommodationType}
+                  onChange={handleChange}
+                >
+                  {options.accommodationTypes.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </Select>
+              </FormGroup>
+              <FormGroup>
+                <Label htmlFor="travelStyle">Dietary Preference</Label>
+                <Select
+                  id="travelStyle"
+                  name="travelStyle"
+                  value={values.travelStyle}
+                  onChange={handleChange}
+                >
+                  {options.travelStyles.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </Select>
+              </FormGroup>
+            </FormRow>
+
+
+            <Label htmlFor="activityType">
+              Select Fitness Goal
+              <p
+                style={{
+                  display: "inline-block",
+                  fontSize: "10px",
+
+                  color: "#666",
+                }}
+              >
+                (select multiple options)
+              </p>
+            </Label>
+            <Select
+              id="activityType"
+              name="activityType"
+              multiple
+              value={values.activityType}
+              onChange={handleMultiSelectChange}
+            >
+              {options.activityTypes.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </Select>
+            
 
             <LanguageSelectorContainer>
               <Label>Language</Label>
