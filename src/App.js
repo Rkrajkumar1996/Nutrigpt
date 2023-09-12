@@ -685,7 +685,7 @@ const ResponseData = ({ response }) => {
   return (
     <ResponseContainer>
       <ResponseTitle>
-        <span role="img" aria-label="emoji"></span> Your travel plan is ready 🎉
+        <span role="img" aria-label="emoji"></span> Your Diet plan is ready 🎉
       </ResponseTitle>
       <ResponseText>
         <ReactMarkdown>{response}</ReactMarkdown>
