@@ -720,7 +720,7 @@ const GenerateButton = ({ loading, onClick }) => (
   </Button>
 );
 
-const AITravelPlanner = () => {
+const DietPlanner = () => {
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState("");
   const [values, setValues] = useState(defaultValues);
@@ -940,8 +940,6 @@ const AITravelPlanner = () => {
                     {cuisineType.emoji}
                   </span>
 
-                  <br />
-
                   <span>{cuisineType.name}</span>
                 </CuisineType>
               ))}
@@ -1110,4 +1108,4 @@ const AITravelPlanner = () => {
   );
 };
 
-export default AITravelPlanner;
+export default DietPlanner;
