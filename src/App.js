@@ -864,7 +864,7 @@ const DietPlanner = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    let prompt = `Generate food diet and fitness LCHF based 7 day planner take the information user allergy in ${values.budget}. The user Dietary Preference is ${values.travelStyle} and the Nutrient Preferences is ${values.interestsNew}. His snack Choice is ${values.accommodationType} The User Fitness Goal is ${values.activityType} Goal and his native cuisine type is ${values.cuisineType}. User age is ${values.tripDuration} for should be written in ${values.language}. `;
+    let prompt = `Generate food diet and fitness LCHF based 7 day planner take the information user allergy in ${values.budget}. The user Dietary Preference is ${values.travelStyle} and the Nutrient Preferences is ${values.interestsNew}. His snack Choice is ${values.accommodationType} The User Fitness Goal is ${values.activityType} Goal and his native cuisine type is ${values.cuisineType}. User age is ${values.tripDuration} within 500 words for should be written in ${values.language}. `;
 
     fetch(`${process.env.REACT_APP_ENDPOINT_URL}`, {
       method: "POST",
